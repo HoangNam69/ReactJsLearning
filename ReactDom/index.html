@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REACT DOM</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+
+<body>
+
+    <div id="root"></div>
+    <script>
+        // //REACT DOM @17
+        // //get element id root
+        // const container = document.getElementById('root');
+        // //create element
+        // const ele = React.createElement("h3", {}, "Tôi đang test REACT DOM @17");
+        // // render element
+        // ReactDOM.render(ele, container);
+
+        // REACT DOM @18
+        // get element id root
+        const root = document.getElementById('root');
+        // create root
+        const container = ReactDOM.createRoot(root);
+        // create element
+        const ele = React.createElement("h3", {
+            style: {
+                color: "red",
+                fontSize: "30px"
+            }
+        }, "Tôi đang test REACT DOM @18");
+        // render element
+        container.render(ele);
+    </script>
+</body>
+
+</html>
