@@ -13,6 +13,17 @@
 
     <div id="root"></div>
     <script>
+        // Test with DOM ES6+
+        const container = document.getElementById('root');
+        const ele = document.createElement("h3");
+        ele.innerHTML = "Tôi đang test với DOM ES6+";
+        Object.assign(ele.style, {
+            color: "purple",
+            fontSize: "30px"
+        });
+        container.appendChild(ele);
+
+
         // //REACT DOM @17
         // //get element id root
         // const container = document.getElementById('root');
@@ -21,20 +32,20 @@
         // // render element
         // ReactDOM.render(ele, container);
 
-        // REACT DOM @18
-        // get element id root
-        const root = document.getElementById('root');
-        // create root
-        const container = ReactDOM.createRoot(root);
-        // create element
-        const ele = React.createElement("h3", {
-            style: {
-                color: "red",
-                fontSize: "30px"
-            }
-        }, "Tôi đang test REACT DOM @18");
-        // render element
-        container.render(ele);
+        // // REACT DOM @18
+        // // get element id root
+        // const root = document.getElementById('root');
+        // // create root
+        // const container = ReactDOM.createRoot(root);
+        // // create element
+        // const ele = React.createElement("h3", {
+        //     style: {
+        //         color: "red",
+        //         fontSize: "30px"
+        //     }
+        // }, "Tôi đang test REACT DOM @18");
+        // // render element
+        // container.render(ele);
     </script>
 </body>
 
