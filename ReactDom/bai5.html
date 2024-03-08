@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Render content</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script>
+        // get element id root
+        const root = document.querySelector("#root");
+        // create root
+        const container = ReactDOM.createRoot(root);
+        // create element
+        const h1 = React.createElement("h1",{
+            title:"Hello",
+            className:"heading"
+        }, "Hello guys!");
+        container.render(h1);
+    </script>
+</body>
+</html>
