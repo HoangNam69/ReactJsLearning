@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Compnent Demo</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // Hiện thực tạo component bằng function và class
+        // Quy tắc đặt tên component là phải viết hoa chữ cái đầu tiên
+
+        function PostItem() {
+            return (
+                <div className="post-item">
+                    <img width="500px" src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/431914790_851410750359330_6404216243316733210_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeGri9kQ7arAhMZOPeRIcispIfMRgvQ3I4sh8xGC9DcjiyMZ_ZEIilGigvx50lqQffxbESV2jL3y3WWygD5QFUi9&_nc_ohc=cksQ0q9AJvsAX88o4eW&_nc_ht=scontent.fsgn5-14.fna&oh=00_AfD9itCDwqSSmOIpiSInXagEQvSWNlS7CkHpZMf4P5OCuQ&oe=65F7B8BC" alt="" />
+                    <h2 className="post-title">2km ở Sài Gòn nó lạ lắm</h2>
+                    <p className="ppost-desc">Bạn có biết 2km ở Sài Gòn nó lạ như thế nào không? Nó có thể làm cho một cô gái xinh đẹp trở nên mệt mỏi.</p>
+                    <p className="post-published">19 giờ trước</p>
+                </div>
+            );
+        }
+
+
+        const app = (
+            <div className="posts-list">
+                <PostItem />
+            </div>
+        );
+
+        const root = document.querySelector("#root");
+        const container = ReactDOM.createRoot(root);
+        container.render(app)
+
+    </script>
+</body>
+
+</html>

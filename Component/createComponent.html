@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Compnent Demo</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // Hiện thực tạo component bằng function và class
+        // Quy tắc đặt tên component là phải viết hoa chữ cái đầu tiên
+        function Header() {
+            return (
+                <div className="header">
+                    Header component
+                </div>
+            );
+        }
+
+        class Content extends React.Component {
+            render() {
+                return (
+                    <div className="content">
+                        Content component
+                    </div>
+                );
+            }
+        }
+
+        class Footer extends React.Component {
+            render() {
+                return (
+                    <div className="footer">
+                        Footer component
+                    </div>
+                );
+            }
+        }
+
+        const app = (
+            <div className="wrapper">
+                <Header></Header>
+                <Content></Content>
+                <Footer></Footer>
+            </div>
+        );
+
+        const root = document.querySelector("#root");
+        const container = ReactDOM.createRoot(root);
+        container.render(app)
+
+    </script>
+</body>
+
+</html>
